@@ -18,11 +18,11 @@ class GPIOIn
 	    state = stateLast = digitalRead(pinNumber);
 	}
 
-        void poll(){
+    void poll(){
 	    state = digitalRead(pinNumber);
 	    if (state != stateLast) {
 		stateLast = state;
-		printf("pin change pin %d\n", pinNumber);
+		//printf("pin change pin %d\n", pinNumber);
 		oscOut->send(oscAddr, "i", state);
 	    }
 	}

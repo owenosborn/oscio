@@ -1,6 +1,9 @@
 #include <wiringPiSPI.h>
 
+// for the MCP3008 ADC on SPI ch 1
+
 #define SPI_CH 1
+
 class ADC
 {
     public:
@@ -40,5 +43,3 @@ class ADC
 	    return ((spibuf[1] << 8) | (spibuf[2])) >> 4;
 	}
 };
-
-

@@ -22,7 +22,7 @@ class GPIOOut
 	    int state = argv[0]->i;
 	    int pin = ((GPIOOut *)user_data)->pinNumber;
 	    digitalWrite(pin, state);
-	    printf("pin: %d, state %d \n", pin, state);
+	    //printf("pin: %d, state %d \n", pin, state);
 	    return 1;
 	}
         
